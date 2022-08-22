@@ -4,8 +4,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm ci --production
+RUN npm set-script prepare ''
+
+RUN npm install --production
 
 COPY . ./
 
-CMD ["node", "src"]
+CMD ["npm", "run", "start"]
