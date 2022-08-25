@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src",
     "test": "nyc --reporter=text mocha --exit",
+    "coverage": "nyc report --reporter=lcov",
     "prepare": "husky install"
   },
   "repository": {
